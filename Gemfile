@@ -66,3 +66,7 @@ group :test do
 end
 
 gem "rspec-rails", "~> 8.0"
+
+gem "cucumber-rails", "~> 4.0", :group => :test
+
+gem "database_cleaner-active_record", "~> 2.2", :group => :test
