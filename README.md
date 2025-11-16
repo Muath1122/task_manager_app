@@ -15,30 +15,28 @@ Includes RSpec (TDD) and Cucumber (BDD) testing with Agile Scrum planning via Gi
 - Mark tasks as completed or not completed
 
 ---
-
 ## 🧪 Testing
 
 ### ✔ RSpec (TDD)
 Model validation tests:
-- Valid task
+- Valid task creation
 - Missing title validation
 
 Run:
 ```bash
 bundle exec rspec
+✔ Cucumber (BDD)
 
+Full CRUD scenarios implemented:
 
+View tasks list
 
-✔ Cucumber (BDD) 
-Feature test:
-Adding a new task and verifying it appears in the list
-Run:  bundle exec cucumber
+Add a new task
 
+Edit a task
 
-🚀 How to Run the App
-bundle install
-rails db:migrate
-rails server
+Delete a task
 
-Open: http://localhost:3000
+Mark a task as completed
 
+Run:bundle exec cucumber
