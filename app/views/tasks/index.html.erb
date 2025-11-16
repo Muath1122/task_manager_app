@@ -1,0 +1,27 @@
+<h1>Tasks List</h1>
+
+<a href="<%= new_task_path %>">+ Add New Task</a>
+
+<table border="1" cellpadding="8" cellspacing="0" style="margin-top: 20px; width: 100%;">
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Due Date</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.title %></td>
+      <td><%= task.description %></td>
+      <td><%= task.due_date %></td>
+      <td><%= task.completed ? "✓ Completed" : "Not Completed" %></td>
+
+      <td>
+        <%= link_to "Edit", edit_task_path(task) %> |
+        <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Delete this task?" } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
